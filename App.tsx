@@ -1,19 +1,19 @@
 import * as React from 'react'
-import { Button, View, Text } from 'react-native'
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import {Button, View, Text, StyleProp} from 'react-native'
+import {NavigationContainer} from '@react-navigation/native'
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
 
 const Routes = {
   home: 'home',
   details: 'details',
 }
 
-const center = { flex: 1, alignItems: 'center', justifyContent: 'center' }
+const center: StyleProp<any> = { flex: 1, alignItems: 'center', justifyContent: 'center' }
 
-function HomeScreen({ navigation, extraData }) {
+function HomeScreen({ navigation, extraData }: { navigation: any, extraData: string }) {
   return (
     <View style={center}>
-      <Text>Home Screen</Text>
+      <Text>Home Screen ts</Text>
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate(Routes.details, {
@@ -24,9 +24,8 @@ function HomeScreen({ navigation, extraData }) {
 
 const Stack = createNativeStackNavigator()
 
-function DetailsScreen({ navigation, route }) {
+function DetailsScreen({ navigation, route }: { navigation: any, route: any }) {
   const { randomNumber } = route.params
-
   return (
     <View style={center}>
 
