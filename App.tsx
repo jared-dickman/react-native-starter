@@ -2,46 +2,46 @@ import * as React from 'react'
 import {Button, View, Text, StyleProp} from 'react-native'
 import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import {EnthusiasmScreen} from './screens/EnthusiasmScreen'
+import {DetailsScreen} from './screens/DetailsScreen'
+
+export {Routes, Styles}
 
 const Routes = {
-  home: 'home',
-  details: 'details',
-}
+  Home: 'Home',
+  Details: 'Details',
+  Enthusiasm: 'Enthusiasm',
+} as const
 
-const center: StyleProp<any> = { flex: 1, alignItems: 'center', justifyContent: 'center' }
 
-function HomeScreen({ navigation, extraData }: { navigation: any, extraData: string }) {
+const Styles: Record<string, StyleProp<any>> = {
+  center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+} as const
+
+
+function HomeScreen<iHomeScreenProps, iHomeScreenState>({ navigation, extraData }: { navigation: any, extraData: string }) {
   return (
-    <View style={center}>
-      <Text>Home Screen ts</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate(Routes.details, {
-          randomNumber: Math.floor(Math.random() * 100),
-        })}/>
+    <View style={Styles.center}>
+      <Text>Home Screen typescript</Text>
+      <Button title="Go to Details"
+              onPress={() => navigation.navigate(Routes.Details, {
+                randomNumber: Math.floor(Math.random() * 100),
+              })}/>
+
+      <Button title="Go to Enthusiasm Recorder"
+              onPress={() => { navigation.navigate(Routes.Enthusiasm) }}/>
+
     </View>)
 }
 
-const Stack = createNativeStackNavigator()
 
-function DetailsScreen({ navigation, route }: { navigation: any, route: any }) {
-  const { randomNumber } = route.params
-  return (
-    <View style={center}>
+type RootStackParamList = {
+  Home: undefined;
+  Details: { userId: string };
+  Enthusiasm: { sort: 'latest' | 'top' } | undefined;
+};
+const Stack = createNativeStackNavigator<RootStackParamList>()
 
-      <Text>Details Screen</Text>
-      <Text>randomNumber: {JSON.stringify(randomNumber)}</Text>
-
-      <Button
-        title="Go to Details... again"
-        onPress={() => navigation.push(Routes.details, {
-          randomNumber: Math.floor(Math.random() * 100),
-        })}/>
-
-      <Button title="Go to Home" onPress={() => navigation.navigate(Routes.home, { /* params go here */ })}/>
-      <Button title="Go back" onPress={() => navigation.goBack()}/>
-    </View>)
-}
 
 function App() {
   return (
@@ -49,12 +49,18 @@ function App() {
       <Stack.Navigator initialRouteName="Home">
 
         {/*<Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }}/>*/}
-        <Stack.Screen name={Routes.home}>
+        <Stack.Screen name={Routes.Home}>
           {(props) =>
             <HomeScreen {...props} extraData={'someData'}/>}
         </Stack.Screen>
 
-        <Stack.Screen name={Routes.details} component={DetailsScreen}/>
+        <Stack.Screen name={Routes.Details} component={DetailsScreen}/>
+
+        <Stack.Screen name={Routes.Enthusiasm}>
+          {(props) =>
+            <EnthusiasmScreen {...props} name={'name'} baseEnthusiasmLevel={2}/>}
+        </Stack.Screen>
+
       </Stack.Navigator>
     </NavigationContainer>)
 }
