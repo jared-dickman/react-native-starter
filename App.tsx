@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import {EnthusiasmScreen} from './screens/EnthusiasmScreen'
 import {DetailsScreen} from './screens/DetailsScreen'
+import {TableScreen} from './screens/TableScreen'
 
 export {Routes, Styles}
 
@@ -11,6 +12,7 @@ const Routes = {
   Home: 'Home',
   Details: 'Details',
   Enthusiasm: 'Enthusiasm',
+  Table: 'Table',
 } as const
 
 
@@ -23,6 +25,7 @@ function HomeScreen<iHomeScreenProps, iHomeScreenState>({ navigation, extraData 
   return (
     <View style={Styles.center}>
       <Text>Home Screen typescript</Text>
+
       <Button title="Go to Details"
               onPress={() => navigation.navigate(Routes.Details, {
                 randomNumber: Math.floor(Math.random() * 100),
@@ -31,14 +34,19 @@ function HomeScreen<iHomeScreenProps, iHomeScreenState>({ navigation, extraData 
       <Button title="Go to Enthusiasm Recorder"
               onPress={() => { navigation.navigate(Routes.Enthusiasm) }}/>
 
+      <Button title="Go to Table"
+              onPress={() => { navigation.navigate(Routes.Table) }}/>
+
     </View>)
 }
 
 
+// Specifying undefined means that the route doesn't have params. A union type with undefined (e.g. SomeType | undefined) means that params are optional.
 type RootStackParamList = {
   Home: undefined;
-  Details: { userId: string };
-  Enthusiasm: { sort: 'latest' | 'top' } | undefined;
+  Details: undefined
+  Enthusiasm: undefined
+  Table: undefined
 };
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
@@ -48,17 +56,18 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
 
-        {/*<Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }}/>*/}
         <Stack.Screen name={Routes.Home}>
-          {(props) =>
-            <HomeScreen {...props} extraData={'someData'}/>}
+          {props => <HomeScreen {...props} extraData={'someData'}/>}
         </Stack.Screen>
 
         <Stack.Screen name={Routes.Details} component={DetailsScreen}/>
 
         <Stack.Screen name={Routes.Enthusiasm}>
-          {(props) =>
-            <EnthusiasmScreen {...props} name={'name'} baseEnthusiasmLevel={2}/>}
+          {props => <EnthusiasmScreen {...props} name={'name'} baseEnthusiasmLevel={2}/>}
+        </Stack.Screen>
+
+        <Stack.Screen name={Routes.Table}>
+          {props => <TableScreen {...props}/>}
         </Stack.Screen>
 
       </Stack.Navigator>

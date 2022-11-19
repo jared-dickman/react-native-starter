@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea07331-0cfc-4313-bf56-4cd790157c48" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/screens/DetailsScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/EnthusiasmScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/TableScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +45,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="ics" />
+    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RunManager" selected="React Native.Android">
@@ -94,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668887733850</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="screens in their own directories">
+      <created>1668888930824</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668888930824</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +111,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working nav" />
     <MESSAGE value="app in ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="app in ts" />
+    <MESSAGE value="screens in their own directories" />
+    <option name="LAST_COMMIT_MESSAGE" value="screens in their own directories" />
   </component>
 </project>
