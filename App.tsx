@@ -1,10 +1,12 @@
 import * as React from 'react'
-import {Button, View, Text, StyleProp} from 'react-native'
+import {View, StyleProp} from 'react-native'
 import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import {EnthusiasmScreen} from './screens/EnthusiasmScreen'
 import {DetailsScreen} from './screens/DetailsScreen'
 import {TableScreen} from './screens/TableScreen'
+import {OtherScreen} from './screens/OtherScreen'
+import {Box, Button, NativeBaseProvider} from 'native-base'
 
 export {Routes, Styles}
 
@@ -13,6 +15,7 @@ const Routes = {
   Details: 'Details',
   Enthusiasm: 'Enthusiasm',
   Table: 'Table',
+  Other: 'Other',
 } as const
 
 
@@ -24,19 +27,12 @@ const Styles: Record<string, StyleProp<any>> = {
 function HomeScreen<iHomeScreenProps, iHomeScreenState>({ navigation, extraData }: { navigation: any, extraData: string }) {
   return (
     <View style={Styles.center}>
-      <Text>Home Screen typescript</Text>
+      <Box>Hello Home Screen</Box>
 
-      <Button title="Go to Details"
-              onPress={() => navigation.navigate(Routes.Details, {
-                randomNumber: Math.floor(Math.random() * 100),
-              })}/>
-
-      <Button title="Go to Enthusiasm Recorder"
-              onPress={() => { navigation.navigate(Routes.Enthusiasm) }}/>
-
-      <Button title="Go to Table"
-              onPress={() => { navigation.navigate(Routes.Table) }}/>
-
+      <Button onPress={() => navigation.navigate(Routes.Details, { randomNumber: Math.floor(Math.random() * 100) })}>Go to Details</Button>
+      <Button onPress={() => { navigation.navigate(Routes.Enthusiasm) }}>Go to Enthusiasm Recorder</Button>
+      <Button onPress={() => { navigation.navigate(Routes.Table) }}>Go to Table</Button>
+      <Button onPress={() => { navigation.navigate(Routes.Other) }}>Go to Other</Button>
     </View>)
 }
 
@@ -47,31 +43,42 @@ type RootStackParamList = {
   Details: undefined
   Enthusiasm: undefined
   Table: undefined
+  Other: undefined
 };
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+    <NativeBaseProvider>
 
-        <Stack.Screen name={Routes.Home}>
-          {props => <HomeScreen {...props} extraData={'someData'}/>}
-        </Stack.Screen>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
 
-        <Stack.Screen name={Routes.Details} component={DetailsScreen}/>
+          <Stack.Screen name={Routes.Home}>
+            {props => <HomeScreen {...props} extraData={'someData'}/>}
+          </Stack.Screen>
 
-        <Stack.Screen name={Routes.Enthusiasm}>
-          {props => <EnthusiasmScreen {...props} name={'name'} baseEnthusiasmLevel={2}/>}
-        </Stack.Screen>
+          <Stack.Screen name={Routes.Details} component={DetailsScreen}/>
 
-        <Stack.Screen name={Routes.Table}>
-          {props => <TableScreen {...props}/>}
-        </Stack.Screen>
+          <Stack.Screen name={Routes.Enthusiasm}>
+            {props => <EnthusiasmScreen {...props} name={'money'} baseEnthusiasmLevel={2}/>}
+          </Stack.Screen>
 
-      </Stack.Navigator>
-    </NavigationContainer>)
+          <Stack.Screen name={Routes.Table}>
+            {props => <TableScreen {...props}/>}
+          </Stack.Screen>
+
+          <Stack.Screen name={Routes.Other}>
+            {props => <OtherScreen {...props}/>}
+          </Stack.Screen>
+
+        </Stack.Navigator>
+      </NavigationContainer>
+
+    </NativeBaseProvider>
+
+  )
 }
 
 export default App
