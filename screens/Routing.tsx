@@ -7,7 +7,8 @@ import {TableScreen} from './TableScreen'
 import {OtherScreen} from './OtherScreen'
 import {HomeScreen} from './HomeScreen'
 import {SplashScreen} from './SplashScreen'
-import { SignInScreen } from './SignInScreen'
+import {SignInScreen} from './SignInScreen'
+import { useAuthStore } from '../stores/AuthStore'
 
 export {generateRouting, Routes}
 
@@ -35,15 +36,18 @@ const Routes = {
 
 
 function generateRouting() {
+  const userToken = useAuthStore(state => state.userToken)
 
-  const isSignedIn = true// state.userToken == null
-  
-  const isLoadingApp = false // This can usually be done by checking if we have a token in SecureStore and validating the token.
-  
-  let isSignOut = false //state.isSignout
+  const isSignedIn = !!userToken  // If userToken exists, we assume the user is logged in
+
+  // This can usually be done by checking if we have a token in SecureStore and validating the token.
+  // isLoading - We set this to true when we're trying to check if we already have a token saved in SecureStore
+  const isLoadingApp = false
+
+  let isSignOut = false //state.isSignout // isSignout - We set this to true when user is signing out, otherwise set it to false
+
 
   if (isLoadingApp) return <SplashScreen/>// We haven't finished checking for the token yet
-  
 
   return (
     <NavigationContainer>
@@ -57,7 +61,7 @@ function generateRouting() {
            <Stack.Screen name={Routes.Details} component={DetailsScreen}/>
 
            <Stack.Screen name={Routes.Enthusiasm}>
-             {props => <EnthusiasmScreen {...props} name={'money'} baseEnthusiasmLevel={2}/>}
+             {props => <EnthusiasmScreen {...props} name={'exclemation world'} baseEnthusiasmLevel={3}/>}
            </Stack.Screen>
 
            <Stack.Screen name={Routes.Table}>
@@ -67,11 +71,11 @@ function generateRouting() {
            <Stack.Screen name={Routes.Other}>
              {props => <OtherScreen {...props}/>}
            </Stack.Screen>
+         </>)
+                    :
 
-         </>) :
-         
          (<>
-           <Stack.Screen name="Signin" 
+           <Stack.Screen name="Signin"
                          component={SignInScreen}
                          options={{
                            title: 'Sign in',
@@ -79,8 +83,7 @@ function generateRouting() {
                            // You can remove this if you want the default 'push' animation
                            animationTypeForReplace: isSignOut ? 'pop' : 'push',
                          }}/>
-         </>)
-        }
+         </>)}
 
       </Stack.Navigator>
     </NavigationContainer>)

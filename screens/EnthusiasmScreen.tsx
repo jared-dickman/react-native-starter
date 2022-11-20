@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Button, StyleSheet, Text, View} from 'react-native'
 
 export {EnthusiasmScreen}
@@ -13,7 +13,7 @@ const EnthusiasmScreen: React.FC<iEnthusiasmScreenProps> = ({
                                                               baseEnthusiasmLevel = 0,
                                                             }) => {
 
-  const [enthusiasmLevel, setEnthusiasmLevel] = React.useState(baseEnthusiasmLevel)
+  const [enthusiasmLevel, setEnthusiasmLevel] = useState(baseEnthusiasmLevel)
 
   const onIncrement = () => setEnthusiasmLevel(enthusiasmLevel + 1)
   const onDecrement = () => setEnthusiasmLevel(enthusiasmLevel > 0 ? enthusiasmLevel - 1 : 0)
@@ -41,15 +41,16 @@ const EnthusiasmScreen: React.FC<iEnthusiasmScreenProps> = ({
     </View>)
 }
 
-const styles = StyleSheet.create({
-                                   container: {
-                                     flex: 1,
-                                     alignItems: 'center',
-                                     justifyContent: 'center',
-                                   },
-                                   greeting: {
-                                     fontSize: 20,
-                                     fontWeight: 'bold',
-                                     margin: 16,
-                                   },
-                                 })
+const styles = StyleSheet.create(
+  {
+    container: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    greeting: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      margin: 16,
+    },
+  })

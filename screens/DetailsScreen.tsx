@@ -1,7 +1,9 @@
 import React from 'react'
-import {Button, Text, View } from 'react-native'
-import { Styles } from '../Styles'
-import { Routes } from './Routing'
+import {Button, Text} from 'native-base'
+import {View} from 'react-native'
+import {Styles} from '../Styles'
+import {Routes} from './Routing'
+import {useAuthStore} from '../stores/AuthStore'
 
 export {DetailsScreen}
 
@@ -17,14 +19,12 @@ const DetailsScreen: React.FC<iDetailsScreenProps> = ({ navigation, route }) => 
 
       <Text>Details Screen</Text>
       <Text>randomNumber: {JSON.stringify(randomNumber)}</Text>
+      
+      <Button onPress={() => navigation.push(Routes.Details, {
+        randomNumber: Math.floor(Math.random() * 100),
+      })}>Go to Details... again</Button>
 
-      <Button
-        title="Go to Details... again"
-        onPress={() => navigation.push(Routes.Details, {
-          randomNumber: Math.floor(Math.random() * 100),
-        })}/>
-
-      <Button title="Go to Home" onPress={() => navigation.navigate(Routes.Home, { /* params go here */ })}/>
-      <Button title="Go back" onPress={() => navigation.goBack()}/>
+      <Button onPress={() => navigation.navigate(Routes.Home, { /* params go here */ })}>Go to Home</Button>
+      <Button onPress={() => navigation.goBack()}>Go back</Button>
     </View>)
 }
