@@ -8,8 +8,8 @@ import {useAuthStore} from '../stores/AuthStore'
 export {DetailsScreen}
 
 interface iDetailsScreenProps {
-  navigation: any
-  route: any
+  navigation: any // todo: find type, from react-navigation
+  route: any // todo: find type, from react-navigation
 }
 
 const DetailsScreen: React.FC<iDetailsScreenProps> = ({ navigation, route }) => {
@@ -19,7 +19,7 @@ const DetailsScreen: React.FC<iDetailsScreenProps> = ({ navigation, route }) => 
 
       <Text>Details Screen</Text>
       <Text>randomNumber: {JSON.stringify(randomNumber)}</Text>
-      
+
       <Button onPress={() => navigation.push(Routes.Details, {
         randomNumber: Math.floor(Math.random() * 100),
       })}>Go to Details... again</Button>

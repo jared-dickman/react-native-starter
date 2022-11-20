@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import {Button, StyleSheet, Text, View} from 'react-native'
+import React, {useState} from 'react'
+import {StyleSheet} from 'react-native'
+import {Button, Text, View} from 'native-base'
 
 export {EnthusiasmScreen}
 
@@ -28,15 +29,17 @@ const EnthusiasmScreen: React.FC<iEnthusiasmScreenProps> = ({
       </Text>
       <View>
         <Button
-          title="Increase enthusiasm"
           accessibilityLabel="increment"
           onPress={onIncrement}
-          color="blue"/>
+          color="blue">
+          Increase enthusiasm
+        </Button>
         <Button
-          title="Decrease enthusiasm"
           accessibilityLabel="decrement"
           onPress={onDecrement}
-          color="red"/>
+          color="red">
+          Decrease enthusiasm
+        </Button>
       </View>
     </View>)
 }

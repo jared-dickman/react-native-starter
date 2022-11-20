@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea07331-0cfc-4313-bf56-4cd790157c48" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/screens/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/e2e/SignInScreen.cy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/e2e/SignInScreen.cy.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Routing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/DetailsScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/DetailsScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/EnthusiasmScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/EnthusiasmScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/SignInScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/SignInScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/SplashScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/SplashScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/TableScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/TableScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +65,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="optimize.imports.on.save" value="true" />
     <property name="rearrange.code.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -62,10 +76,11 @@
       <recent name="$PROJECT_DIR$/Styles.tsx" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cypress/" />
       <recent name="$PROJECT_DIR$/" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.">
+  <component name="RunManager" selected="React Native.Android">
     <configuration type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:19006">
       <method v="2" />
     </configuration>
@@ -91,17 +106,11 @@
         <option name="ReactNativePackager" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug." />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4ea07331-0cfc-4313-bf56-4cd790157c48" name="Changes" comment="" />
-      <changelist id="" name="first commit" comment="" />
       <created>1668644152419</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -191,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668920554987</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="tsconfig for cypress">
+      <created>1668920731476</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1668920731476</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +223,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working nav" />
@@ -221,7 +238,8 @@
     <MESSAGE value="update readme" />
     <MESSAGE value="add eslint" />
     <MESSAGE value="add cypress" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cypress" />
+    <MESSAGE value="tsconfig for cypress" />
+    <option name="LAST_COMMIT_MESSAGE" value="tsconfig for cypress" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
