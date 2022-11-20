@@ -1,14 +1,14 @@
 import React from 'react'
 import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import {DetailsScreen} from './DetailsScreen'
-import {EnthusiasmScreen} from './EnthusiasmScreen'
-import {TableScreen} from './TableScreen'
-import {OtherScreen} from './OtherScreen'
-import {HomeScreen} from './HomeScreen'
-import {SplashScreen} from './SplashScreen'
-import {SignInScreen} from './SignInScreen'
-import { useAuthStore } from '../stores/AuthStore'
+import {useAuthStore} from './stores/AuthStore'
+import {SplashScreen} from './screens/SplashScreen'
+import {HomeScreen} from './screens/HomeScreen'
+import {DetailsScreen} from './screens/DetailsScreen'
+import {EnthusiasmScreen} from './screens/EnthusiasmScreen'
+import {OtherScreen} from './screens/OtherScreen'
+import {TableScreen} from './screens/TableScreen'
+import {SignInScreen} from './screens/SignInScreen'
 
 export {generateRouting, Routes}
 
@@ -44,7 +44,7 @@ function generateRouting() {
   // isLoading - We set this to true when we're trying to check if we already have a token saved in SecureStore
   const isLoadingApp = false
 
-  let isSignOut = false //state.isSignout // isSignout - We set this to true when user is signing out, otherwise set it to false
+  const isSignOut = false //state.isSignout // isSignout - We set this to true when user is signing out, otherwise set it to false
 
 
   if (isLoadingApp) return <SplashScreen/>// We haven't finished checking for the token yet

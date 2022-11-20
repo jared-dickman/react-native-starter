@@ -14,4 +14,6 @@ includes -
 
 ###type saftey [typescript]
 
+###linting [eslint]
+
 ###dev server [expo]
