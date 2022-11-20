@@ -2,12 +2,12 @@ import React from 'react'
 import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import {DetailsScreen} from './DetailsScreen'
-import {SigninScreen} from './SigninScreen'
 import {EnthusiasmScreen} from './EnthusiasmScreen'
 import {TableScreen} from './TableScreen'
 import {OtherScreen} from './OtherScreen'
 import {HomeScreen} from './HomeScreen'
 import {SplashScreen} from './SplashScreen'
+import { SignInScreen } from './SignInScreen'
 
 export {generateRouting, Routes}
 
@@ -29,13 +29,21 @@ const Routes = {
   Enthusiasm: 'Enthusiasm',
   Table: 'Table',
   Other: 'Other',
-  Signin: 'Signin',
+  SignIn: 'SignIn',
   Splash: 'Signin',
 } as const
 
 
 function generateRouting() {
-  const isSignedIn = true
+
+  const isSignedIn = true// state.userToken == null
+  
+  const isLoadingApp = false // This can usually be done by checking if we have a token in SecureStore and validating the token.
+  
+  let isSignOut = false //state.isSignout
+
+  if (isLoadingApp) return <SplashScreen/>// We haven't finished checking for the token yet
+  
 
   return (
     <NavigationContainer>
@@ -61,9 +69,16 @@ function generateRouting() {
            </Stack.Screen>
 
          </>) :
+         
          (<>
-           <Stack.Screen name="Signin" component={SigninScreen}/>
-           <Stack.Screen name="Splash" component={SplashScreen}/>
+           <Stack.Screen name="Signin" 
+                         component={SignInScreen}
+                         options={{
+                           title: 'Sign in',
+                           // When logging out, a pop animation feels intuitive
+                           // You can remove this if you want the default 'push' animation
+                           animationTypeForReplace: isSignOut ? 'pop' : 'push',
+                         }}/>
          </>)
         }
 

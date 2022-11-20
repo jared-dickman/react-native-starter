@@ -2,7 +2,7 @@ import * as React from 'react'
 import {View} from 'react-native'
 import {Box, Button} from 'native-base'
 import {Routes} from './Routing'
-import {Styles} from '../App'
+import { Styles } from '../Styles'
 
 export {HomeScreen}
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import {Button, Text, View } from 'react-native'
-import {Routes, Styles } from '../App'
+import { Styles } from '../Styles'
+import { Routes } from './Routing'
 
 export {DetailsScreen}
 
