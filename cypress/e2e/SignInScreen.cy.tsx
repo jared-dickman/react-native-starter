@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('SignIn Screen', () => {
   
   it(' it opens to signin', () => {

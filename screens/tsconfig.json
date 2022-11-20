@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "types": [
+      "cypress"
+    ],
+
+    "resolveJsonModule": true,
+
+    "rootDir": ".",
+    "baseUrl": "..",
+
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+
+    "paths": {
+      "cypress/*": [
+        "cypress/*"
+      ],
+    },
+  }
+}
