@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea07331-0cfc-4313-bf56-4cd790157c48" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/stores/AuthStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/DetailsScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/DetailsScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/EnthusiasmScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/EnthusiasmScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Routing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Routing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/SignInScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/SignInScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +83,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4ea07331-0cfc-4313-bf56-4cd790157c48" name="Changes" comment="" />
+      <changelist id="" name="first commit" comment="" />
       <created>1668644152419</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -144,11 +138,29 @@
       <option name="project" value="LOCAL" />
       <updated>1668914881628</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add zustand, implement basic login/logout flow with userToken">
+      <created>1668917566672</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668917566672</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working nav" />
@@ -158,6 +170,7 @@
     <MESSAGE value="plug in native-base component library" />
     <MESSAGE value="setting up auth screens, isolate routes" />
     <MESSAGE value="setting up authentication routing flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting up authentication routing flow" />
+    <MESSAGE value="add zustand, implement basic login/logout flow with userToken" />
+    <option name="LAST_COMMIT_MESSAGE" value="add zustand, implement basic login/logout flow with userToken" />
   </component>
 </project>
