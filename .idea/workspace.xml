@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea07331-0cfc-4313-bf56-4cd790157c48" name="Changes" comment="" />
+    <list default="true" id="4ea07331-0cfc-4313-bf56-4cd790157c48" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Routing.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/DetailsScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/EnthusiasmScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/HomeScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/OtherScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/SignInScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/SplashScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/TableScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/AuthStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +32,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.eslintrc.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2HeSeeVxOEoXpsa8WJT0JO69fPO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -59,6 +74,8 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/screens" />
+      <recent name="$PROJECT_DIR$/src/stores" />
       <recent name="$PROJECT_DIR$/cypress/" />
       <recent name="$PROJECT_DIR$/" />
     </key>
