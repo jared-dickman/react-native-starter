@@ -8,6 +8,8 @@ includes -
 
 ###component library [native-base]
 
+###tables [react-native-table-component]
+
 ###state management [zustand]
 
 ###type saftey [typescript]
