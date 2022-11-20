@@ -2,7 +2,7 @@ import React from 'react'
 import {Button, Text} from 'native-base'
 import {View} from 'react-native'
 import {Styles} from '../Styles'
-import {Routes} from './Routing'
+import {Routes} from '../Routing'
 import {useAuthStore} from '../stores/AuthStore'
 
 export {DetailsScreen}

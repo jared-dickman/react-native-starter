@@ -13,7 +13,7 @@ const SignInScreen: React.FC<iSignInScreenProps> = ({}) => {
 
   return (<>
 
-    <Text>SignIn</Text>
+    <Text>Sign In</Text>
     <Input placeholder="SignIn"></Input>
 
     <Button onPress={submit}> Submit</Button>

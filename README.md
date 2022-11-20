@@ -12,6 +12,8 @@ includes -
 
 ###state management [zustand]
 
+###testing [cypress]
+
 ###type saftey [typescript]
 
 ###linting [eslint]

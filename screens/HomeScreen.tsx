@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {View} from 'react-native'
 import {Box, Button} from 'native-base'
-import {Routes} from './Routing'
+import {Routes} from '../Routing'
 import {Styles} from '../Styles'
 import {useAuthStore} from '../stores/AuthStore'
 
